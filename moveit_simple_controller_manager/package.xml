@@ -1,0 +1,28 @@
+<package>
+  <name>moveit_simple_controller_manager</name>
+  <version>0.3.0</version>
+  <description> Simple controller manager plugin for MoveIt</description>
+  <maintainer email="nihad.sa@hotmail.de">Nihad Saliji</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend> 
+
+  <build_depend>action_controller</build_depend>
+  <build_depend>moveit_core</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>control_msgs</build_depend>
+  <build_depend>actionlib</build_depend>
+
+  <run_depend>action_controller</run_depend>
+  <run_depend>moveit_core</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>control_msgs</run_depend>
+  <run_depend>actionlib</run_depend>
+
+  <export>
+    <moveit_core plugin="${prefix}/moveit_simple_controller_manager_plugin_description.xml"/>
+  </export>
+
+</package>

@@ -1,0 +1,12 @@
+#firefly_twist_controller_node:
+linear/xy: {k_p: 3.0, k_i: 2.0, k_d: 0.05}
+linear/z:  {k_p: 5.0, k_i: 1.0, k_d: 0.05}
+angular/xy:  {k_p: 20.0, k_i: 1.0, k_d: 2.0}
+angular/z:  {k_p: 10.0, k_i: 1.0, k_d: 1.0}
+
+velocity_gain: {x: 5, y: 5, z: 5}
+
+# normalized: 431, 326, 71
+attitude_gain: {x: 5, y: 5, z: 0.15}
+# normalized: 57, 43, 20
+angular_rate_gain: {x: 0.68, y: 0.68, z: 0.18}

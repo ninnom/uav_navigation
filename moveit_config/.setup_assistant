@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: rotors_description
+    relative_path: urdf/hexacopter.xacro
+  SRDF:
+    relative_path: config/firefly_bot.srdf
+  CONFIG:
+    author_name: Nihad Saliji
+    author_email: nihad.sa@hotmail.de
+    generated_timestamp: 1521441955

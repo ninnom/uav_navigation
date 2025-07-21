@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<launch>
+
+  <arg name="mav_name" default="firefly"/>
+  <arg name="world_name" default="with_wall"/>  <!--basic,with_wall -->
+  <arg name="enable_logging" default="false" />
+  <arg name="enable_ground_truth" default="true" />
+  <arg name="log_file" default="$(arg mav_name)" />
+  <arg name="debug" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="paused" default="false"/>
+  <arg name="verbose" default="false"/>
+  <arg name="db" default="false" />
+  <arg name="db_path" default="$(find moveit_config_sim)/default_warehouse_mongo_db" />
+
+
+ <!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
+  <include file="$(find moveit_config_sim)/launch/move_group.launch">
+    <arg name="allow_trajectory_execution" value="true"/>
+    <arg name="fake_execution" value="false"/>
+    <arg name="info" value="true"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+</launch>

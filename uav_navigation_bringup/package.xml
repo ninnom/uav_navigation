@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>uav_navigation_bringup</name>
+  <version>0.3.0</version>
+  <description>Launch files for UAV Navigation</description>
+
+  <author email="nihad.sa@hotmail.de">Nihad Saliji</author>
+  <maintainer email="nihad.sa@hotmail.de">Nihad Saliji</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<robot name="r200" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+     <link name="r200/base_link" />
+
+     <joint name="r200_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<parent link="r200/base_link" />
+ 		<child link="realsense_camera_link" />
+     </joint>
+
+     <link name="realsense_camera_link">
+	<inertial>
+		<mass value="0.0615752"/>
+		<origin rpy="0 0 0" xyz="0 0 0.015"/>
+		<inertia ixx="9.108e-05" ixy="0" ixz="0" iyy="2.51e-06" iyz="0" izz="8.931e-05"/>
+	</inertial>
+	
+	<collision name="realsense_camera__collision">
+	    <origin rpy="0  0  0" xyz="0     0     0.015"/>
+	    <geometry>
+		<box size="0.0078 0.130 0.0192"/>
+	    </geometry>
+	</collision>
+
+	<visual name="realsense_camera__visual">
+	    <origin rpy="0  0  0" xyz="0     0     0.015"/>
+	    <geometry>
+		<mesh filename="package://realsense_gazebo_plugin/models/realsense_camera/meshes/realsense.dae" scale="1.0 1.0 1.0"/>
+	    </geometry>
+	</visual>
+     </link>
+
+</robot>

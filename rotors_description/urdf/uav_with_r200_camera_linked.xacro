@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<robot name="$(arg mav_name)" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Instantiate the mav with a generic odometry sensor. -->
+  <xacro:include filename="$(find rotors_description)/urdf/mav_generic_odometry_sensor.gazebo" />
+
+  <xacro:include filename="$(find rotors_description)/urdf/realsense_components.xacro" />
+
+  <!-- Mount a Realsense-Sensor in front of the Firefly. -->
+  <xacro:realsense_sensor_macro
+    namespace="${namespace}/realsense"
+    parent_link="${namespace}/base_link"
+    enable_cameras="true"
+    enable_depth="true"
+    enable_ground_truth="false">
+    <origin xyz="0.1 0.0 -0.03" rpy="0.0 0.1 0.0" />
+  </xacro:realsense_sensor_macro>
+
+</robot>

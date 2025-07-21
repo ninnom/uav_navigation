@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>moveit_external_octomap_updater</name>
+  <version>0.1.0</version>
+  <description>A plugin to use externally generated octomaps</description>
+  <maintainer email="nihad.sa@hotmail.de">Nihad Saliji</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>moveit_core</depend>
+  <depend>roscpp</depend>
+  <depend>rosconsole</depend>
+  <depend>tf</depend>
+  <depend>tf_conversions</depend>
+  <depend>message_filters</depend>
+  <depend>octomap_ros</depend>
+  <depend>pluginlib</depend>
+  <depend>octomap_msgs</depend>
+  <depend>moveit_msgs</depend>
+  <depend>moveit_ros_perception</depend>
+
+  <export>
+    <moveit_ros_perception plugin="${prefix}/moveit_external_octomap_updater_plugin_description.xml"/>
+  </export>
+
+</package>

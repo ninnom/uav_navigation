@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<launch>
+    <include file="$(find uav_navigation_bringup)/launch/r200_nodelet_rgbd.launch" />
+    <include file="$(find uav_navigation_bringup)/launch/rtabmap_mapping.launch" />
+    <include file="$(find uav_navigation_bringup)/launch/uav_moveit.launch" />
+
+    <!--include file="$(find uav_navigation_bringup)/launch/ekf_robot_pose.launch" /--> <!-- included when run on Firefly-->
+</launch>
